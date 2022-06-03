@@ -1,0 +1,1 @@
+const modal = document.querySelector('.js-show__modal')

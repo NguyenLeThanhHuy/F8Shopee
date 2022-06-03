@@ -1,0 +1,403 @@
+/* Begin: Header  */
+
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__narbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar--list {
+    display: flex;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+
+
+.header__navbar--item {
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+
+.header__navbar--item,
+.header__navbar--link {
+    color: var(--white);
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar--item--separate::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 16px;
+    background-color: #fb9086;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* .header__navbar--item ,
+.header__navber-icon-link,
+.header__navbar--link {
+    display: inline-flex;
+    align-items: center;
+} */
+
+.header__narbar .navbar-icon {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin: 0 3px;
+    vertical-align: middle;
+    color: var(--white)
+}
+
+
+
+.header__navbar--item:hover,
+.header__navbar--link:hover,
+.header__narbar .navbar-icon:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white);
+}
+
+/* Header QR Code */
+
+.header__qr {
+    background-color: var(--white);
+    width: 186px;
+    position: absolute;
+    left: 0;
+    top: 118%;
+    border-radius: 2px;
+    padding: 8px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.header__qr::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 100%;
+    left: 0;
+    top: -16px;
+}
+
+.header__navbar--item--separate:hover .header__qr {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header__qr-download-img {
+    height: 16px;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-link:nth-child(1) {
+    margin-left: 11px;
+}
+
+.header__qr-link:nth-child(2) {
+    margin-right: 11px;
+}
+
+
+.header__notify {
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white);
+    z-index: 1;
+    border: 1px solid #D3D3D3;
+    cursor: default;
+    transform-origin: calc(100% - 20px) 0;
+    animation: show-notify ease-in .2s;
+    will-change: opacity, transform;
+    -webkit-animation: show-notify ease-in .2s;
+    -moz-animation: show-notify ease-in .2;
+    -o-animation: show-notify ease-in .2;
+    -ms-animation: show-notify ease-in .2;
+    display: none;
+}
+
+.header__notify::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 20px;
+    top: -14px;
+    left: 0;
+}
+
+.header__navbar--item:hover .header__notify {
+    display: block;
+}
+
+@keyframes show-notify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header__notify--item {
+    padding: 0;
+
+}
+
+.header__navbar--item--viewed {
+
+    background-color: rgba(238, 75, 43, 0.08);
+}
+
+.header__notify--item:hover {
+    background-color: #f7f7f7;
+}
+
+
+
+.header__notify--list {
+    padding: 0;
+    position: relative;
+    z-index: 99;
+}
+
+.header__notify::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 20px 27px;
+    border-color: transparent transparent var(--white) transparent;
+    top: -29px;
+    right: 4px;
+}
+
+.header__notification {
+    background-color: var(--white);
+    height: 40px;
+}
+
+.header__notification h3 {
+    margin: 0 0 0 12px;
+    font-size: 1.4rem;
+    user-select: none;
+    font-weight: 400;
+    color: #999;
+    line-height: 40px;
+}
+
+.header__notify--link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+}
+
+.header__notify--name {
+    font-size: 1.4rem;
+    display: block;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--dark);
+
+}
+
+.header__notify--link:hover {
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 48px;
+    background-color: red;
+    object-fit: contain;
+}
+
+.header__notify--info {
+    margin-left: 12px;
+}
+
+.header__notify--decription {
+    color: #756f6e;
+    font-size: 1.2rem;
+    margin-top: 4px;
+    display: block;
+    line-height: 1.6;
+}
+
+.header__notify--footer {
+    display: flex;
+}
+
+.header__notify--btn {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 8px 0;
+    color: #999;
+}
+
+.header__notify--btn:hover {
+    color: #999;
+    text-decoration: none;
+
+}
+
+.auth-form {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.auth-form__container {
+    padding: 0 32px;
+    margin-top: 16px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 0 12px;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgba(60, 52, 52, 0.795);
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    color: #fe6433;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(51, 51, 51, 0.353);
+    border-radius: 2px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.auth-form-input:focus {
+    border-color: #888;
+}
+
+.auth-form__aside {
+    margin-top: 18px;
+}
+
+
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.auth-form__policy-link {
+    color: #fe6433;
+}
+
+.auth-form__policy-link:hover {
+    color: #fe6433;
+    text-decoration: none;
+
+}
+
+.auth-form__controls {
+    margin-top: 80px;
+}
+
+.auth-form__socials {
+    background-color: #f5f5f5;
+    padding: 16px 36px;
+    margin-top: 24px;
+}
+
+.btn-width-icon:hover {
+    text-decoration: none;
+}
+
+.social--facebook i {
+    color: #fff;
+}
+
+
+
+.social--facebook {
+    background-color: #3a5a98;
+}
+
+.social--facebook:hover {
+    color: #fff;
+}
+
+.social--google:hover {
+    color: #666;
+}
+
+.social--google {
+    background-color: #fff;
+    color: #666;
+}
+
+.social--google i {
+    background-image: linear-gradient(to bottom, red 30%, yellow, green);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.auth-form__help-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-form__help-link-forgot {
+    color: #fe6433;
+}
+
+.auth-form__help-separate {
+    display: block;
+    height: 20px;
+    border-left: 1px solid rgba(111, 109, 109, 0.266);
+    margin: 1px 16px 0;
+}
+
+/* End: Header */

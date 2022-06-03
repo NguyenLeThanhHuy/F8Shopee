@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --height-header: 120px;
+    --height-header-nav: 31px;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Keyframe animation */
+
+@keyframes show-notify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes showopa {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes growth {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+ /* Wrap Grid */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+ /* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn linear .1s;
+}
+
+.show_modal {
+    display: flex !important;
+}
+
+.js-modal-signup {
+    display: none;
+}
+
+.js-modal-login {
+    display: none;
+}
+
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.403);
+    animation: showopa linear 0.1s;
+}
+
+.modal_body {
+    margin: auto;
+    z-index: 999;
+    font-size: 13px;
+    animation: growth linear .1s ;
+}
+
+/* Button style */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+}
+
+.btn-width-icon:hover {
+    text-decoration: none;
+}
+
+.btn.btn-bg {
+    color: #fff;
+    background-color: #fe6433;
+}
+
+.btn-size-s {
+    height:32px;
+    font-size: 1.2rem;
+}
+ 
+.btn-width-icon {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+
+
+
+.btn-width-icon i {
+    margin: 0 12px;
+    font-size: 1.8rem;
+}
+
+/* Loadding */
+
+.load {
+    width: 100%;
+    height: 100%;
+    background-color: #16191e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: block;
+    overflow: hidden;
+}
+
+.load .load-item{
+    
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

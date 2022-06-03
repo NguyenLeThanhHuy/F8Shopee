@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Begin: Header  */
+
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__narbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar--list {
+    display: flex;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+
+
+.header__navbar--item {
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+
+.header__navbar--item ,
+.header__navbar--link {
+    color: var(--white);
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar--item--separate::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width:1px;
+    height: 16px;
+    background-color: #fb9086;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* .header__navbar--item ,
+.header__navber-icon-link,
+.header__navbar--link {
+    display: inline-flex;
+    align-items: center;
+} */
+
+.header__narbar .navbar-icon {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin: 0 3px;
+    vertical-align: middle;
+    color: var(--white)
+}
+
+.header__navbar--item:hover ,
+.header__navbar--link:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+/* End: Header */
